@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import Navegacion from './componentes/Navegacion';
-import Tarjeta from './componentes/Tarjeta';
+import Cargar from './componentes/Cargar';
+
 function App() {
   return (
     <div className="App">
-      <Navegacion titulo='Barra 1'/>
-      <div className='row'>
-      <Tarjeta titulo='Tarjeta 1' descripcion='Descripcion 1'/>      
-      <Tarjeta titulo='Tarjeta 2' descripcion='Descripcion 2'/>
-      <Tarjeta titulo='Tarjeta 3' descripcion='Descripcion 3'/>
-      </div>
+      
+      <Navegacion titulo='Tarjetas' enlace4h={true}/>
+      <Cargar/>      
+      {/* <Navegacion enlace3='Barra 2' enlace2="enlace" enlace4h={false}/> */}      
+      {/* <Tarjeta titulo='Tarjeta 1' descripcion='Descripcion 1' position='0'/>
+      <Tarjeta titulo='Tarjeta 1' descripcion='Descripcion 1' position='1'/>  
+      <Tarjeta titulo='Tarjeta 1' descripcion='Descripcion 1' position='2'/>  
+      <Tarjeta titulo='Tarjeta 1' descripcion='Descripcion 1' position='3'/>         */}      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Hola from './componentes/Hola';
-import Tarjeta from './componentes/Tarjeta'; 
+import PiePagina from './componentes/PiePagina';
+import Formulario from './componentes/Formulario';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Hola/>    
+    <Formulario/> 
+    <PiePagina />       
   </React.StrictMode>
 );
 
