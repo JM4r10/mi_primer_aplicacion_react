@@ -11,15 +11,27 @@ class Formulario extends Component{
             prioridad:"Alta",
             imagen:""
         }
+        this.cambio=this.cambio.bind(this);
+        this.guardar=this.guardar.bind(this);
     }
 
     cambio(e){
-        console.log(e.target.value,e.target.name)
+        // console.log(e.target.value,e.target.name)
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+        console.log(this.state);
     }
+
+    guardar(){
+        alert('Guardando...');
+    }
+
+
     render(){
         return(
-            <div className="card w-50 m-auto">
-                <h1 className="m-auto">Nueva tarjeta</h1>
+            <div className="card w-50 m-auto bg-black">
+                <h1 className="m-auto text-white">Nueva tarjeta</h1>
                 <form className="card-body">
                     <div className="form-group">
                         <input type="text" placeholder="Titulo Tarjeta" name="titulo" onChange={this.cambio} className="form-control mt-3"></input>
@@ -36,6 +48,10 @@ class Formulario extends Component{
                         <input type="text" placeholder="Responsable Tarjeta" name="numero" onChange={this.cambio} className="form-control mt-3"></input>
                     </div>
                     <div className="form-group">
+                        <input type="text" placeholder="Imagen Tarjeta" name="imagen" className="form-control mt-3" onChange={this.cambio}/>   
+                    </div>
+                    <h5 className="text-white mt-2 ms-2">Prioridad</h5>
+                    <div className="form-group">
                         <select name="prioridad" className="form-control mt-3">
                             <option>Baja</option>
                             <option>Media</option>
@@ -43,7 +59,7 @@ class Formulario extends Component{
                         </select>
                     </div>
                     <div className="d-grid gap-2 col-2 mx-auto mt-3">
-                        <button className="btn btn-primary ">Guardar</button>
+                        <button className="btn btn-primary" type="button" onClick={this.guardar}>Guardar</button>
                     </div>
                 </form>
             </div>
